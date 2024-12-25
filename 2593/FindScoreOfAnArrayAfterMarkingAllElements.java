@@ -1,0 +1,4 @@
+/*
+https://leetcode.com/problems/find-score-of-an-array-after-marking-all-elements/description/?envType=daily-question&envId=2024-12-13
+*/
+
