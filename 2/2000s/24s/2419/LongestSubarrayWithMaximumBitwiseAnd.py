@@ -15,3 +15,24 @@ class Solution:
             else:
                 currentLengthOfSubarray=0
         return maxLength
+
+# ------- ******* -------
+
+class Solution:
+    def longestSubarray(self, nums: List[int]) -> int:
+        lengthOfNums=len(nums)
+        maxAnd=0
+        currentLargestSubarray=0
+        resultantLongestSubarray=0
+        for i in range(0, lengthOfNums, 1):
+            currentVal=nums[i]
+            if currentVal>maxAnd:
+                maxAnd=currentVal
+                currentLargestSubarray=0
+                resultantLongestSubarray=0
+            if currentVal==maxAnd:
+                currentLargestSubarray+=1
+            else:
+                currentLargestSubarray=0
+            resultantLongestSubarray=max(resultantLongestSubarray, currentLargestSubarray)
+        return resultantLongestSubarray

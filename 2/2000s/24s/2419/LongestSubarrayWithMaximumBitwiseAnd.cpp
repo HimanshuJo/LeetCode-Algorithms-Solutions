@@ -17,3 +17,27 @@ public:
         return maxlen;
     }
 };
+
+// ------- ####### -------
+
+class Solution2 {
+public:
+    int longestSubarray(vector<int>& nums) {
+        int sz=nums.size(), maxVal=0, currentStreak=0, res=0;
+        for(int i=0; i<sz; ++i){
+            int curVal=nums[i];
+            if(curVal>maxVal){
+                maxVal=curVal;
+                res=0;
+                currentStreak=0;
+            }
+            if(curVal==maxVal){
+                currentStreak++;
+            } else{
+                currentStreak=0;
+            }
+            res=max(res, currentStreak);
+        }
+        return res;
+    }
+};
