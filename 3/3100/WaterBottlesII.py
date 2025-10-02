@@ -1,6 +1,4 @@
-/*
-https://leetcode.com/problems/water-bottles-ii/?envType=daily-question&envId=2025-10-02
-*/
+# https://leetcode.com/problems/water-bottles-ii/?envType=daily-question&envId=2025-10-02
 
 class Solution:
     def maxBottlesDrunk(self, numBottles: int, numExchange: int) -> int:
